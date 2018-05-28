@@ -1,0 +1,72 @@
+.table#targyTable{
+-fx-border-color:#1269d5;
+-fx-border-radius: 10;
+-fx-color: white;
+}
+
+.combobox#targyCombo, .combobox#exportCombo{
+-fx-border-color: #1269d5;
+-fx-background-color:#fff;
+-fx-border-radius: 10;
+}
+
+#hatter{
+-fx-background-image: url("bgright.png");
+}
+
+.menu#menusor{
+  
+-fx-background-color: linear-gradient(white, white, grey);  
+-fx-color: white;
+/*-fx-background-image: url("bgright.png");*/
+
+-fx-border-radius: 10;
+-fx-border-width: 3;
+}
+
+.panel#seperator{
+    -fx-background-color:#1269d5;
+    -fx-border-color: white;
+    
+}
+
+.segitseg#helpPane{
+ -fx-background-image: url("bg2.png");
+ -fx-background-color: #1269d5;
+-fx-border-color:#fff;
+-fx-background-repeat: round;
+-fx-background-position: bottom center;   
+    
+}
+
+.table#table{
+-fx-background-color:a0d9ff;
+-fx-background-image: url("bg2.png"), url("bg1.png");
+-fx-border-color:#fff;
+-fx-background-repeat: stretch;
+-fx-background-position: bottom center;
+}
+
+.mezok#okAzonosito, .mezok#vizsgaName, .mezok#nevTextField, .mezok#megyeTextField, .mezok#telepulesTextFiled, .mezok#tantargyTextFiled1, .mezok#tantargyTextFiled2, .mezok#tantargyTextFiled3, .mezok#tantargyTextFiled4, .mezok#filePlace, .mezok#exportName{
+-fx-background-color:#fff;
+-fx-border-radius: 5em;
+-fx-border-color: #1269d5;
+-fx-color: black;
+}
+
+.gomb#hozzaad, .gomb#feltolt,  .gomb#torles, .gomb#exportButton, .gomb#newExamButton, .gomb#deleteExam{
+-fx-background-color:#1269d5;
+-fx-background-radius: 50;
+-fx-text-fill: white;
+}
+ .gomb#talloz{
+-fx-background-color:#fff;
+-fx-background-radius: 50;
+-fx-border-color: #1269d5;
+}
+
+
+.panel#mainPane, .panel#tantargyPane, .panel#sortPane, .panel#alertPane{
+-fx-background-color:#fff;
+-fx-background-image: url("bgright.png");
+}

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="769.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tanuloinyilvantarto.FXMLDocumentController">
+    <children>
+      <Pane id="tantargyPane" fx:id="tantargyPane" prefHeight="769.0" prefWidth="1184.0" styleClass="panel" stylesheets="@Design.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="651.0" layoutY="161.0" text="Tantárgyak bevitele" textFill="#1269d5" underline="true">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font></Label>
+            <DatePicker id="datePicker" fx:id="datePicker" layoutX="837.0" layoutY="343.0" style="-fx-border-color: #1269d5; -fx-border-radius: 20;" />
+            <TextField id="vizsgaName" fx:id="vizsgaName" layoutX="837.0" layoutY="294.0" styleClass="mezok" stylesheets="@Design.css" />
+            <RadioButton id="nyolc" fx:id="nyolc" layoutX="837.0" layoutY="393.0" mnemonicParsing="false" selected="true" text="8:00" textFill="#1269d5">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ido" />
+               </toggleGroup>
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></RadioButton>
+            <RadioButton id="kilenc" fx:id="kilenc" layoutX="837.0" layoutY="425.0" mnemonicParsing="false" text="9:00" textFill="#1269d5" toggleGroup="$ido">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></RadioButton>
+            <RadioButton id="tiz" fx:id="tiz" layoutX="837.0" layoutY="459.0" mnemonicParsing="false" text="10:00" textFill="#1269d5" toggleGroup="$ido">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></RadioButton>
+            <Label layoutX="684.0" layoutY="295.0" text="Tantárgy neve" textFill="#1269d5">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="684.0" layoutY="344.0" text="Vizsga napja" textFill="#1269d5">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="664.0" layoutY="390.0" text="Kezdési időpont" textFill="#1269d5">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <TableView id="vizsgaTable" fx:id="vizsgaTable" layoutX="165.0" layoutY="139.0" prefHeight="556.0" prefWidth="274.0">
+                <placeholder>
+                            <Label fx:id="tableLabel" text="Nincsenek felvitt vizsgák" />    
+             </placeholder>
+             </TableView>
+            <Label layoutX="222.0" layoutY="50.0" text="Vizsgák" textFill="#1269d5" underline="true">
+               <font>
+                  <Font size="42.0" />
+               </font></Label>
+            <Button id="newExamButton" layoutX="627.0" layoutY="583.0" mnemonicParsing="false" onAction="#newExam" styleClass="gomb" stylesheets="@Design.css" text="Hozzá ad">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Plus_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button id="deleteExam" layoutX="870.0" layoutY="585.0" mnemonicParsing="false" onAction="#deleteExam" styleClass="gomb" stylesheets="@Design.css" text="Tárgyak törlése">
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Delete_Database_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children></Pane>
+      <Pane id="helpPane" fx:id="helpPane" prefHeight="769.0" prefWidth="1184.0" styleClass="segitseg" stylesheets="@Design.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextArea fx:id="leiras" layoutX="156.0" layoutY="39.0" prefHeight="702.0" prefWidth="891.0">
+               <font>
+                  <Font size="11.0" />
+               </font></TextArea>
+         </children>
+      </Pane>
+      <Pane id="sortPane" fx:id="sortPane" prefHeight="769.0" prefWidth="1184.0" styleClass="panel" stylesheets="@Design.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ComboBox id="targyCombo" fx:id="targyCombo" layoutX="113.0" layoutY="83.0" onAction="#comboAction" prefHeight="25.0" prefWidth="487.0" promptText="                                                  --------- Tárgyak ----------" styleClass="combobox" stylesheets="@Design.css" />
+            <TableView id="targyTable" fx:id="targyTable" layoutX="113.0" layoutY="145.0" prefHeight="495.0" prefWidth="487.0">
+                <placeholder>
+                            <Label fx:id="tableLabel2" text="Válasszon tárgyat">  
+                            <font>
+                  <Font name="System Bold" />
+                            </font>
+                            </Label> 
+             </placeholder>
+             </TableView>
+            <Label fx:id="l1" contentDisplay="CENTER" layoutX="145.0" layoutY="682.0" prefHeight="17.0" prefWidth="424.0" />
+            <Separator layoutX="660.0" layoutY="45.0" orientation="VERTICAL" prefHeight="709.0" prefWidth="26.0" />
+            <Button id="exportButton" layoutX="857.0" layoutY="385.0" mnemonicParsing="false" onAction="#exportButtonAction" styleClass="gomb" stylesheets="@Design.css" text="Táblázat mentése" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Download_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ComboBox id="exportCombo" fx:id="exportCombo" layoutX="744.0" layoutY="255.0" prefHeight="27.0" prefWidth="360.0" promptText="                         ------ Táblázatok mentése ------" styleClass="combobox" stylesheets="@Design.css" />
+            <TextField id="exportName" fx:id="exportName" layoutX="793.0" layoutY="324.0" prefHeight="27.0" prefWidth="262.0" promptText="Fájl neve" styleClass="mezok" stylesheets="@Design.css" />
+         </children>
+      </Pane>
+      <Pane id="mainPane" fx:id="mainPane" layoutY="-20.0" prefHeight="756.0" prefWidth="1190.0" styleClass="panel" stylesheets="@Design.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="feltolt" layoutX="955.0" layoutY="701.0" mnemonicParsing="false" onAction="#feltolt" prefHeight="26.0" prefWidth="140.0" styleClass="gomb" stylesheets="@Design.css" text="Táblázat feltöltése" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Page_100px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TableView id="table" fx:id="table" layoutY="24.0" prefHeight="742.0" prefWidth="798.0" styleClass="table" stylesheets="@Design.css">
+            <placeholder>
+                            <Label text="Nincs regisztrált tanuló" textFill="WHITE" />    
+             </placeholder>
+             </TableView>
+            <VBox alignment="TOP_CENTER" layoutX="860.0" layoutY="99.0" prefHeight="465.0" prefWidth="225.0" spacing="30.0">
+               <children>
+                  <TextField id="okAzonosito" fx:id="okAzonosito" prefHeight="25.0" prefWidth="215.0" promptText="Oktatási azonosító" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="nevTextField" fx:id="nevTextField" promptText="Név" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="megyeTextField" fx:id="megyeTextFiled" promptText="Megye" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="telepulesTextFiled" fx:id="telepulesTextFiled" promptText="Település" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="tantargyTextFiled1" fx:id="tantargyTextFiled1" promptText="Tantárgy" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="tantargyTextFiled2" fx:id="tantargyTextFiled2" promptText="Tantárgy" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="tantargyTextFiled3" fx:id="tantargyTextFiled3" promptText="Tantárgy" styleClass="mezok" stylesheets="@Design.css" />
+                  <TextField id="tantargyTextFiled4" fx:id="tantargyTextFiled4" promptText="Tantárgy" styleClass="mezok" stylesheets="@Design.css" />
+                  <Button id="hozzaad" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="103.0" styleClass="gomb" stylesheets="@Design.css" text="Új tanuló" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8_Add_User_Male_104px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+            <Label layoutX="871.0" layoutY="44.0" text="Új tanuló hozzáadása" textFill="#1269d5" underline="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Label>
+            <Button id="talloz" layoutX="1090.0" layoutY="654.0" mnemonicParsing="false" onAction="#talloz" style="-fx-border-radius: 20;" styleClass="gomb" stylesheets="@Design.css" text="Tallózás" textFill="#1269d5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Open_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TextField id="filePlace" fx:id="filePlace" layoutX="821.0" layoutY="656.0" prefHeight="27.0" prefWidth="255.0" promptText="Fájl helye" styleClass="mezok" stylesheets="@Design.css" />
+            <Label layoutX="835.0" layoutY="607.0" text="Adatok feltöltése külső fájlból" textFill="#1269d5" underline="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Separator id="seperator" layoutX="821.0" layoutY="583.0" prefHeight="0.0" prefWidth="342.0" styleClass="panel" stylesheets="@Design.css" />
+            <Label fx:id="cs1" layoutX="1096.0" layoutY="100.0" prefHeight="5.0" prefWidth="9.0" textFill="#ff1818" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Asterisk_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="cs3" layoutX="1097.0" layoutY="209.0" textFill="#ff1818" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Asterisk_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="cs4" layoutX="1097.0" layoutY="269.0" textFill="#ff1818" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Asterisk_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="cs5" layoutX="1097.0" layoutY="330.0" prefHeight="25.0" prefWidth="21.0" textFill="#ff1818" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Asterisk_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="cs2" layoutX="1095.0" layoutY="156.0" textFill="#ff1818" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Asterisk_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Button id="torles" layoutX="821.0" layoutY="701.0" mnemonicParsing="false" onAction="#delete" styleClass="gomb" stylesheets="@Design.css" text="Adatok törlése" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons8_Delete_Database_104px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="820.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Identity_Theft_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="820.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Autograph_96px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="39.0" layoutX="820.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_City_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="822.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Home_100px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="823.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Book_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="821.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Book_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="822.0" layoutY="498.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Book_104px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="823.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8_Book_104px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane id="alertPane" fx:id="alertPane" layoutX="404.0" layoutY="273.0" prefHeight="137.0" prefWidth="385.0" styleClass="panel" stylesheets="@Design.css" visible="false">
+         <children>
+            <Label id="alertText" fx:id="alertText" layoutX="101.0" layoutY="23.0" prefHeight="91.0" prefWidth="262.0" />
+            <Label id="exitText" fx:id="exitText" layoutX="366.0" layoutY="6.0" text="X">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></Label>
+            <ImageView fx:id="alertimage" fitHeight="75.0" fitWidth="89.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@alert.png" />
+               </image></ImageView>
+            <ImageView fx:id="doneimage" fitHeight="101.0" fitWidth="103.0" layoutX="1.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@done.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="workimage" fitHeight="75.0" fitWidth="89.0" layoutX="14.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@work.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="menuPane" prefHeight="25.0" prefWidth="1184.0">
+         <children>
+            <MenuBar id="menusor" prefHeight="31.0" prefWidth="1190.0" styleClass="menu" stylesheets="@Design.css">
+              <menus>
+                <Menu mnemonicParsing="false" text="Menü">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#nextP2" text="Tanulók" />
+                    <MenuItem mnemonicParsing="false" onAction="#nextP3" text="Tantárgyak" />
+                        <MenuItem mnemonicParsing="false" onAction="#nextP1" text="Vizsga jelentkezések" />
+                        <MenuItem fx:id="beosztas" mnemonicParsing="false" text="Vizsgabeosztás készítése" />
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8_List_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                <Menu mnemonicParsing="false" onAction="#showHelp" text="Segítség">
+                     <items>
+                      <MenuItem mnemonicParsing="false" onAction="#showHelp" text="Segítség" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8_Info_104px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Menu>
+                  <Menu mnemonicParsing="false" onAction="#nevjegy" text="Névjegy">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#nevjegy" text="© 2018 Titkovics Ferenc, Aczél Norbert" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8_Copyright_104px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
